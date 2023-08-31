@@ -200,6 +200,8 @@ void canary_check(struct stack *s)
 // allocation
 for (int i = 0; (i + 1) * sizeof(u32) <= size; i++)
 {
+    // 给待分配的内存标记为 MAGIC
+    // 如果在标记前就是 MAGIC，报告 double-allocation */
     panic_on(((u32 *)ptr)[i] == MAGIC, "double-allocation");
     arr[i] = MAGIC;
 }
