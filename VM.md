@@ -177,6 +177,10 @@ TLB 本质上是存放 PTE 的 cache （ translation lookaside buffer ）
 
 注意：假设一个 PTE 大小 4B，一个一级 PT 或者一片二级 PTE 刚好又是一个页面大小
 
+==多级页表的索引方式==
+
+见原书 P579 ：core i7 的地址翻译
+
 ==优点==
 
 1. 如果一级 PT 中一个 PTE 是 null，它对应的二级 PT 根本不存在
