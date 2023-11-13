@@ -1,4 +1,5 @@
 - [FAT](#fat)
+  - [结构](#结构)
   - [文件](#文件)
   - [目录](#目录)
   - [实操](#实操)
@@ -7,8 +8,9 @@
 
 参考
 
-- [jyy 视频：2020, 27](https://www.bilibili.com/video/BV1oZ4y1t7ce/?spm_id_from=333.788&vd_source=454e9c56dd1d2d25131e921b939a8d39)
+- [jyy 视频：2022, 27](https://www.bilibili.com/video/BV1oZ4y1t7ce/?spm_id_from=333.788&vd_source=454e9c56dd1d2d25131e921b939a8d39)
 - [Microsoft FAT Specification ](https://jyywiki.cn/pages/OS/manuals/MSFAT-spec.pdf)
+- [FAT 文件系统](https://gaoyichao.com/Xiaotu/?book=XiaoTuOS&title=FAT%E6%96%87%E4%BB%B6%E7%B3%BB%E7%BB%9F)
 
 # FAT
 
@@ -24,6 +26,17 @@ vector<struct block *> file; // 文件
 [RTFM: Microsoft FAT Specification ](https://jyywiki.cn/pages/OS/manuals/MSFAT-spec.pdf)
 
 一切细节都在手册
+
+## 结构
+
+FAT 32
+
+1. 保留区
+2. FAT表区
+3. 文件和目录存储区
+
+> sector: 扇区
+> cluster: 多个连续的扇区，用来存 data 的
 
 ## 文件
 
